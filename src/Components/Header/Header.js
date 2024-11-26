@@ -1,11 +1,10 @@
 import React from 'react';
-
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <>
-      <nav className=" text-white ">
-      <div className="container mx-auto flex items-center justify-between py-4 px-6">
+    <header>
+      <div className="container mx-auto flex items-center justify-between text-sm  py-4 px-6 mb-5 border-b border-b-gray-400">
         {/* Logo */}
         <div className="flex items-center">
           <img
@@ -13,25 +12,49 @@ const Header = () => {
             alt="Logo"
             className="w-50 h-30 mr-3"
           />
-          
         </div>
 
         {/* Navigation Links */}
-        <ul className="hidden md:flex space-x-6 ">
+        <ul className="hidden md:flex mx-auto flex items-center justify-between h-26 space-x-6"
+          style={{marginBottom:'0 ', paddingLeft:'0'}}
+        >
+        {/* hidden md:flex mx-auto flex items-center justify-between  space-x-6 */}
           <li>
-            <a href="#home" className="hover:text-customGreen text-xl  no-underline">
-              Home
-            </a>
+            <NavLink
+              to="/"
+              className="text-xl no-underline hover:text-customGreen"
+              activeClassName="font-bold text-customGreen"
+              exact
+            >
+              HOME
+            </NavLink>
           </li>
           <li>
-            <a href="#about" className="hover:text-customGreen text-xl  no-underline ">
-              About
-            </a>
+            <NavLink
+              to="/doctors"
+              className="text-xl no-underline hover:text-customGreen"
+              activeClassName="font-bold text-customGreen"
+            >
+              ALL DOCTORS
+            </NavLink>
           </li>
           <li>
-            <a href="#contact" className="hover:text-customGreen text-xl  no-underline bg-customGreen ">
-              Contact
-            </a>
+            <NavLink
+              to="/about"
+              className="text-xl no-underline hover:text-customGreen"
+              activeClassName="font-bold text-customGreen"
+            >
+              ABOUT
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/contact"
+              className="text-xl no-underline hover:text-customGreen"
+              activeClassName="font-bold text-customGreen"
+            >
+              CONTACT
+            </NavLink>
           </li>
         </ul>
 
@@ -44,8 +67,9 @@ const Header = () => {
           />
         </div>
       </div>
-    </nav>
-    </>
+      
+
+    </header>
   );
 };
 
