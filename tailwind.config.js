@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         customGreen: '#17bf8f', // Add your custom black color
         textColor: ['hover'],
+        mt: ['margin-top'],
       },
     },
   },

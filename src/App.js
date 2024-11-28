@@ -5,10 +5,12 @@ import Home from './Components/Pages/Home';
 import Doctors from './Components/Pages/Doctors';
 import About from './Components/Pages/About';
 import Contact from './Components/Pages/Contact';
+import Footer from './Components/Footer/Footer';
+import Card from './Components/Card/Card';
 
 const App = () => {
   return (
-    <div className='mx-auto'>
+    <div className=' container mx-auto'>
       {/* Header */}
       <Header />
 
@@ -19,6 +21,9 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      {/* footer */}
+      <Card/>
+      <Footer/>
     </div>
   );
 };
