@@ -6,7 +6,7 @@ import Doctors from './Components/Pages/Doctors';
 import About from './Components/Pages/About';
 import Contact from './Components/Pages/Contact';
 import Footer from './Components/Footer/Footer';
-import Card from './Components/Card/Card';
+// import Card from './Components/Card/Card';
 
 const App = () => {
   return (
@@ -22,7 +22,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       {/* footer */}
-      <Card/>
+      {/* <Card/> */}
       <Footer/>
     </div>
   );
