@@ -6,11 +6,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        customGreen: '#17bf8f', // Add your custom black color
-        textColor: ['hover'],
-        mt: ['margin-top'],
+        customGreen: '#17bf8f', // Add your custom green color
+      },
+      gridTemplateColumns: {
+        // Define custom column templates
+        auto: 'repeat(auto-fill, minmax(200px, 1fr))',
       },
     },
   },
   plugins: [],
-}
+};

@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header>
-      <div className="container mx-auto flex items-center justify-between text-sm  py-4 px-6 mb-5 border-b border-b-gray-400">
+    <header className='mx-4 sm:mx-[10%]'>
+      <div className=" mx-auto flex items-center justify-between text-sm  py-4 px-6 mb-4 border-b border-b-gray-400">
         {/* Logo */}
         <div className="flex items-center">
           <img
