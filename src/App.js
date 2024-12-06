@@ -6,16 +6,18 @@ import Doctors from './Components/Pages/Doctors';
 import About from './Components/Pages/About';
 import Contact from './Components/Pages/Contact';
 import Footer from './Components/Footer/Footer';
-import Login from './Components/Pages/Login';
+import Login from './Components/Auth/Login';
 import MyProfile from './Components/Pages/MyProfile';
 import MyAppointment from './Components/Pages/MyAppointment';
 import Appointment from './Components/Appointment';
 import TopDoctor from './Components/TopDoctor';
+import LoginPage from './Components/Auth/Login';
 // import Card from './Components/Card/Card';
 
 const App = () => {
   return (
-    <div className=' mx-4 sm:mx-[10%]'>
+    <div className='container m-auto'>
+      <LoginPage/>
       {/* Header */}
       <Header />
 
