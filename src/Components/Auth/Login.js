@@ -17,16 +17,16 @@ function LoginPage() {
               />
             </div>
             {/* Right Form (Full width on small screens) */}
-            <div className="w-full md:w-1/2 flex items-center justify-center">
-              <div className="w-full max-w-lg p-6">
-                <div className="mb-6 text-center">
+            <div className="w-full md:w-1/2 flex items-center justify-center ">
+              <div className="w-full max-w-lg p-6 m-3 border rounded">
+                <div className="mb-6 text-customGreen">
                   <h4 className="text-2xl font-bold">
-                    Welcome back you've been missed!
+                    Login MediMeet
                   </h4>
                 </div>
                 {/* Google Login */}
                 <div className="flex flex-col gap-4">
-                  <button className="flex items-center justify-center bg-gray-800 text-white gap-2 border border-gray-300 py-2 px-4 rounded-lg hover:bg-gray-700">
+                  <button className="flex items-center justify-center bg-gray-800 text-white gap-2 border border-gray-300 py-2 px-4 rounded-lg hover:bg-gray-700 hover:ring hover:ring-gray-300">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -39,7 +39,7 @@ function LoginPage() {
                     </svg>
                     <span>Log in with Google</span>
                   </button>
-                  <p className="text-center mt-1">Or sign in with</p>
+                  <p className="text-center text-gray-400 mt-1 pb-2">Or sign in with</p>
                 </div>
                 {/* Login Form */}
                 <form>
@@ -91,18 +91,19 @@ function LoginPage() {
                     </div>
                     <button
                       type="submit"
-                      className="w-full bg-gray-800 text-white py-3 rounded-lg hover:bg-gray-900"
+                      className="w-full bg-customGreen text-white py-3 rounded-lg hover:ring hover:ring-green-300"
                     >
                       Log in now
                     </button>
                   </div>
                 </form>
                 {/* Links */}
-                <div className="flex justify-center gap-6 mt-6">
-                  <a href="#!" className="text-blue-500 hover:underline">
-                    Create new account
-                  </a>
-                  <a href="#!" className="text-blue-500 hover:underline">
+                <div className="flex justify-between gap-6 mt-6 md:text-sm ">
+                  <span>Don’t have an account? 
+                  <a href="#!" className="text-blue-500 px-1 no-underline hover:underline">
+                    Register 
+                  </a></span>
+                  <a href="#!" className="text-blue-500 no-underline hover:underline">
                     Forgot password
                   </a>
                 </div>

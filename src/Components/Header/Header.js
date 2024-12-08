@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
   return (
     <header className='mx-4 sm:mx-[10%]'>
-      <div className=" mx-auto flex items-center justify-between text-sm  py-4 px-6 mb-4 border-b border-b-gray-400">
+      <div className=" mx-auto flex items-center justify-center text-sm  py-4 px-6 mb-4 border-b border-b-gray-400">
         {/* Logo */}
         <div className="flex items-center">
           <img
@@ -22,7 +22,7 @@ const Header = () => {
           <li>
             <NavLink
               to="/"
-              className="text-xl no-underline hover:text-customGreen"
+              className="text-xl text-gray-900 no-underline hover:text-customGreen   "
               activeClassName="font-bold text-customGreen"
               exact
             >
@@ -32,16 +32,16 @@ const Header = () => {
           <li>
             <NavLink
               to="/doctors"
-              className="text-xl no-underline hover:text-customGreen"
+              className="text-xl text-gray-900 no-underline hover:text-customGreen "
               activeClassName="font-bold text-customGreen"
             >
-              ALL DOCTORS
+               DOCTORS
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/about"
-              className="text-xl no-underline hover:text-customGreen"
+              className="text-xl text-gray-900 no-underline hover:text-customGreen "
               activeClassName="font-bold text-customGreen"
             >
               ABOUT
@@ -50,7 +50,7 @@ const Header = () => {
           <li>
             <NavLink
               to="/contact"
-              className="text-xl no-underline hover:text-customGreen"
+              className="text-xl text-gray-900 no-underline hover:text-customGreen "
               activeClassName="font-bold text-customGreen"
             >
               CONTACT

@@ -17,9 +17,11 @@ import LoginPage from './Components/Auth/Login';
 const App = () => {
   return (
     <div className='container m-auto'>
+      
       <LoginPage/>
       {/* Header */}
       <Header />
+
 
       {/* Routes */}
       <Routes>
@@ -28,7 +30,7 @@ const App = () => {
         <Route path="/doctors/:speciality" element={<TopDoctor />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/my-profile" element={<MyProfile />} />
         <Route path="/my-appointments" element={<MyAppointment />} />
         <Route path="/appointment/:docId" element={<Appointment />} />
