@@ -66,6 +66,11 @@ const Header = () => {
             className="w-10 h-10 rounded-full"
           />
         </div>
+
+        <div className="flex items-center space-x-3">
+          <button className="  no-underline gap-2 px-8 py-3 bg-customGreen text-white font-semibold rounded-full shadow-md hover:ring hover:ring-green-300">
+            Login/Register</button>
+        </div>
       </div>
       
 

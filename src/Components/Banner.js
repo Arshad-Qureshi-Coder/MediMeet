@@ -16,7 +16,7 @@ const Banner = () => {
           <img className='w-28' src={assets.group_profiles} alt='' />
           <p className='text-gray-900'> Simply browse through our extensive list of trusted doctors,<br className='hidden sm:block' />schedule your appointment hassle-free.</p>
         </div>
-        <a href='#speciality' class=" flex items-center no-underline gap-2 px-8 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:scale-105 transition-all duration-300 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 ">
+        <a href='#speciality' className=" flex items-center no-underline gap-2 px-8 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:scale-105 transition-all duration-300 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 ">
           Book appointment <img className='w-3 filter invert' src={assets.arrow_icon} alt='' />
         </a>
       </div>
