@@ -5,7 +5,7 @@ function LoginPage() {
   return (
     <div className="login-img bg-cover bg-center min-h-screen flex items-center justify-center">
       <div className="bg-white w-full max-w-7xl mx-auto p-4">
-        <div className="bg-gray-50 shadow-sm rounded-lg overflow-hidden">
+        <div className=" shadow-sm rounded-lg overflow-hidden">
           <div className="flex flex-wrap md:flex-nowrap items-center justify-center">
             {/* Left Image (Hidden on small screens, reduced size on medium screens) */}
             <div className="hidden md:flex md:w-1/2 justify-center">
