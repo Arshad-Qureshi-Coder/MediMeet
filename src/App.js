@@ -18,7 +18,7 @@ const App = () => {
   return (
     <div className='container m-auto'>
       
-      <LoginPage/>
+      {/* <LoginPage/> */}
       {/* Header */}
       <Header />
 
