@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { assets } from '../../assets/assets';
 
 const Header = () => {
 
@@ -8,8 +9,8 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [token, setToken] = useState(true);
   return (
-    <header className=''>
-      <div className="  flex items-center justify-between text-sm  py-4   border-b border-b-gray-400">
+    <header className='mx-4 sm:mx-[10%]'>
+      <div className="  flex items-center justify-between text-sm  py-4 mb-5  border-b border-b-gray-400">
         {/* Logo */}
         <div className="flex items-center">
           <img
@@ -73,10 +74,11 @@ const Header = () => {
           {token ? (
             <div className="flex items-center space-x-3">
               <img
-                src="https://via.placeholder.com/40"
+                src={assets.profile_pic}
                 alt="Profile"
                 className="w-10 h-10 rounded-full"
               />
+              <img src={assets.dropdown_icon}/>
             </div>
           ) : (
             <button
