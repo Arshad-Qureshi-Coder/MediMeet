@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { assets } from '../../assets/assets';
 
@@ -8,92 +8,190 @@ const Header = () => {
 
   const [showMenu, setShowMenu] = useState(false);
   const [token, setToken] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  // Function to toggle the menu open/close
+  const toggleMenu = () => {
+    setShowMenu((prev) => !prev);
+  };
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <header className='mx-4 sm:mx-[10%]'>
-      <div className="  flex items-center justify-between text-sm  py-4 mb-5  border-b border-b-gray-400">
-        {/* Logo */}
-        <div className="flex items-center">
-          <img
-            src="/images/assets/medi-meet-removebg.png"
-            alt="Logo"
-            className="w-50 h-30 mr-3"
-          />
-        </div>
-
-        {/* Navigation Links */}
-        <div>
-
-        <ul className="md:flex items-start gap-5 font-medium hidden"
-       
+    <header className="bg-white border-b border-gray-300">
+  <div className="flex items-center justify-between py-4 px-4 md:px-8">
+    {/* Left: Logo or Menu Icon */}
+    <div className="flex items-center">
+      <button
+        className="block md:hidden text-gray-700 focus:outline-none"
+        onClick={toggleMenu}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="2"
+          stroke="currentColor"
+          className="w-6 h-6" 
         >
-          
-          {/* hidden md:flex mx-auto flex items-center justify-between  space-x-6 */}
-          <li>
-            <NavLink
-              to="/"
-              className="text-xl text-gray-900 no-underline hover:text-customGreen   "
-              activeClassName="font-bold text-customGreen"
-              exact
-            >
-              HOME
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/doctors"
-              className="text-xl text-gray-900 no-underline hover:text-customGreen "
-              activeClassName="font-bold text-customGreen"
-            >
-              DOCTORS
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/about"
-              className="text-xl text-gray-900 no-underline hover:text-customGreen "
-              activeClassName="font-bold text-customGreen"
-            >
-              ABOUT
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/contact"
-              className="text-xl text-gray-900 no-underline hover:text-customGreen "
-              activeClassName="font-bold text-customGreen"
-            >
-              CONTACT
-            </NavLink>
-          </li>
-        </ul>
-        </div>
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+      <img
+        src="/images/assets/medi-meet-removebg.png"
+        alt="Logo"
+        className="w-50 h-auto  md:w-50 md:h-30 ml-3"
+      />
+    </div>
 
-        {/* Profile Image */}
+    {/* Center: Navigation Links */}
+    <div className="hidden md:flex items-center space-x-6">
+      <NavLink
+        to="/"
+        className="text-lg text-gray-900 no-underline hover:text-customGreen"
+        activeClassName="font-bold text-customGreen"
+        exact
+      >
+        HOME
+      </NavLink>
+      <NavLink
+        to="/doctors"
+        className="text-lg text-gray-900 no-underline hover:text-customGreen"
+        activeClassName="font-bold text-customGreen"
+      >
+        DOCTORS
+      </NavLink>
+      <NavLink
+        to="/about"
+        className="text-lg text-gray-900 no-underline hover:text-customGreen"
+        activeClassName="font-bold text-customGreen"
+      >
+        ABOUT
+      </NavLink>
+      <NavLink
+        to="/contact"
+        className="text-lg text-gray-900 no-underline hover:text-customGreen"
+        activeClassName="font-bold text-customGreen"
+      >
+        CONTACT
+      </NavLink>
+    </div>
 
-        <div className="flex items-center space-x-3">
-          {token ? (
-            <div className="flex items-center space-x-3">
-              <img
-                src={assets.profile_pic}
-                alt="Profile"
-                className="w-10 h-10 rounded-full"
-              />
-              <img src={assets.dropdown_icon}/>
+    {/* Right: Profile Image or Login */}
+    <div className="flex items-center space-x-3">
+      {token ? (
+        <div className="relative flex items-center space-x-3">
+          <img
+            src={assets.profile_pic}
+            alt="Profile"
+            className="w-10 h-10 rounded-full"
+          />
+          <img
+            src={assets.dropdown_icon}
+            className="w-3 h-3 cursor-pointer"
+            onClick={toggleDropdown}
+          />
+          {isOpen && (
+            <div className="absolute top-14 right-0 mt-2 w-56 bg-white border border-gray-300 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+              <NavLink
+                to="/profile"
+                className="block px-4 py-3 text-md text-gray-500 font-bold hover:bg-gray-100 rounded-t-lg transition-colors no-underline"
+              >
+                My Profile
+              </NavLink>
+              <NavLink
+                to="/appointments"
+                className="block px-4 py-3 text-md text-gray-500 font-bold hover:bg-gray-100 transition-colors no-underline"
+              >
+                My Appointments
+              </NavLink>
+              <NavLink
+                to="/login"
+                onClick={() => setIsOpen(false)}
+                className="block px-4 py-3 text-md text-red-500 font-bold hover:bg-gray-100 border-b border-gray-300 rounded-b-lg transition-colors no-underline"
+              >
+                Logout
+              </NavLink>
             </div>
-          ) : (
-            <button
-              onClick={() => navigate('/login')}
-              className="no-underline gap-2 px-8 py-3 bg-customGreen text-white font-semibold rounded-full shadow-md hover:ring hover:ring-green-300"
-            >
-              Login/Register
-            </button>
           )}
         </div>
+      ) : (
+        <button
+          onClick={() => navigate("/login")}
+          className="no-underline gap-2 px-6 py-2 bg-customGreen text-white font-semibold rounded-full shadow-md hover:ring hover:ring-green-300"
+        >
+          Login/Register
+        </button>
+      )}
+    </div>
+  </div>
 
-      </div>
+  {/* Small Screen Menu */}
+  {showMenu && (
+    <div className="md:hidden">
+      <ul className="space-y-4 text-center bg-white shadow-md py-4">
+        <li>
+          <NavLink
+            to="/"
+            className="block text-lg text-gray-900 hover:text-customGreen"
+            activeClassName="font-bold text-customGreen"
+            exact
+          >
+            HOME
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/doctors"
+            className="block text-lg text-gray-900 hover:text-customGreen"
+            activeClassName="font-bold text-customGreen"
+          >
+            DOCTORS
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/about"
+            className="block text-lg text-gray-900 hover:text-customGreen"
+            activeClassName="font-bold text-customGreen"
+          >
+            ABOUT
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/contact"
+            className="block text-lg text-gray-900 hover:text-customGreen"
+            activeClassName="font-bold text-customGreen"
+          >
+            CONTACT
+          </NavLink>
+        </li>
+      </ul>
+    </div>
+  )}
+</header>
 
-
-    </header>
   );
 };
 

@@ -43,7 +43,7 @@ const Footer = () => {
                     <li>
                         +0-000-000-000
                     </li>
-                    <li> <a href='#'>medimeet@gmail.com</a></li>
+                    <li > <a href='#' className='no-underline'>medimeet@xyz.com</a></li>
                 </ul>
             </div>
         </div>
