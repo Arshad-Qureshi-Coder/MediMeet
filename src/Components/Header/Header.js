@@ -37,7 +37,7 @@ const Header = () => {
     <header className="bg-white border-b border-gray-300">
   <div className="flex items-center justify-between py-4 px-4 md:px-8">
     {/* Left: Logo or Menu Icon */}
-    <div className="flex items-center">
+    <div className="flex items-center ">
       <button
         className="block md:hidden text-gray-700 focus:outline-none"
         onClick={toggleMenu}
@@ -56,7 +56,7 @@ const Header = () => {
             d="M4 6h16M4 12h16M4 18h16"
           />
         </svg>
-        
+
       </button>
       <img
         src="/images/assets/medi-meet-removebg.png"
@@ -149,47 +149,59 @@ const Header = () => {
 
   {/* Small Screen Menu */}
   {showMenu && (
-    <div className="md:hidden">
-      <ul className="space-y-4 text-center bg-white shadow-md py-4">
-        <li>
-          <NavLink
-            to="/"
-            className="block text-lg text-gray-900 hover:text-customGreen"
-            activeClassName="font-bold text-customGreen"
-            exact
-          >
-            HOME
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/doctors"
-            className="block text-lg text-gray-900 hover:text-customGreen"
-            activeClassName="font-bold text-customGreen"
-          >
-            DOCTORS
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/about"
-            className="block text-lg text-gray-900 hover:text-customGreen"
-            activeClassName="font-bold text-customGreen"
-          >
-            ABOUT
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/contact"
-            className="block text-lg text-gray-900 hover:text-customGreen"
-            activeClassName="font-bold text-customGreen"
-          >
-            CONTACT
-          </NavLink>
-        </li>
-      </ul>
-    </div>
+    <div
+    className={`fixed top-0 left-0 h-full bg-white shadow-md transform ${
+      showMenu ? 'translate-x-0' : '-translate-x-full'
+    } transition-transform duration-300 ease-in-out z-50`}
+  >
+    <ul className="space-y-4 text-center py-4">
+      <li>
+        <NavLink
+          to="/"
+          className="block text-lg text-gray-900 hover:text-customGreen"
+          activeClassName="font-bold text-customGreen"
+          exact
+        >
+          HOME
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/doctors"
+          className="block text-lg text-gray-900 hover:text-customGreen"
+          activeClassName="font-bold text-customGreen"
+        >
+          DOCTORS
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/about"
+          className="block text-lg text-gray-900 hover:text-customGreen"
+          activeClassName="font-bold text-customGreen"
+        >
+          ABOUT
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/contact"
+          className="block text-lg text-gray-900 hover:text-customGreen"
+          activeClassName="font-bold text-customGreen"
+        >
+          CONTACT
+        </NavLink>
+      </li>
+    </ul>
+
+    {/* Close Button */}
+    <button
+      onClick={toggleMenu}
+      className="absolute top-4 right-4 text-gray-900 hover:text-customGreen focus:outline-none"
+    >
+      ✕ {/* You can replace this with a close icon */}
+    </button>
+  </div>
   )}
 </header>
 
