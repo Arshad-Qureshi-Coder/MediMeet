@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       colors: {
         customGreen: '#17bf8f', // Add your custom green color
-        bgCGreen:'#71d5b8'
+        bgCGreen:'#71d5b8',
+        bgbackColor:'#f8f9fa'
       },
       gridTemplateColumns: {
         // Define custom column templates

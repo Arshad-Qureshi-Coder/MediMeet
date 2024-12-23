@@ -9,6 +9,7 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [token, setToken] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const dropdownRef = useRef(null);
 
   // Function to toggle the menu open/close
@@ -33,8 +34,19 @@ const Header = () => {
     };
   }, []);
 
+ 
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0); 
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll); 
+  }, []); 
+
   return (
-    <header className="bg-white border-b border-gray-300">
+    <header className={`bg-bgbackColor z-50 ${isScrolled ? 'fixed top-0 left-0 w-full shadow ' : ''}`}>
   <div className="flex items-center justify-between py-4 px-4 md:px-8">
     {/* Left: Logo or Menu Icon */}
     <div className="flex items-center ">
