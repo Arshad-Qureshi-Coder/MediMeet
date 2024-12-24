@@ -8,8 +8,8 @@ const Banner = () => {
       {/* -------left-side------ */}
       <div className='md:w-1/2 flex flex-col items-start justify-center gap-4 py-10 m-auto md:py-[10vw] md:mb-[-30px]'>
         <p className='text-3xl md:text-4xl lg:text-5xl text-gray-500 font-bold leading-tight md:leading-tight lg:leading-tight '>
-          <span className='text-blue-500'>Book</span> Appointment<br/> With
-          <span className='text-blue-500'> Trusted Doctors</span>
+          <span className='text-[#17bf8f]'>Book</span> Appointment<br/> With
+          <span className='text-[#17bf8f]'> Trusted Doctors</span>
           {/* Book Appointment
           With Trusted Doctors */}
         </p>
@@ -17,14 +17,14 @@ const Banner = () => {
           <img className='w-28' src={assets.group_profiles} alt='' />
           <p className='text-gray-900'> Simply browse through our extensive list of trusted doctors,<br className='hidden sm:block' />schedule your appointment hassle-free.</p>
         </div>
-        <a href='#speciality' className=" flex items-center no-underline gap-2 px-8 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:scale-105 transition-all duration-300 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 ">
+        <a href='#speciality' className=" flex items-center no-underline gap-2 px-8 py-3 bg-[#17bf8f] text-white font-semibold rounded-lg shadow-md hover:scale-105 transition-all duration-300 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 ">
           Book appointment <img className='w-3 filter invert' src={assets.arrow_icon} alt='' />
         </a>
       </div>
 
       {/* ------right-side------ */}
       <div className='md:w-1/2 relative'>
-        <img className='w-full md:absolute bottom-0 h-auto rounded-lg' src={assets.header_img} alt='' />
+        <img className='w-full md:absolute border-b  bottom-0 h-auto rounded-lg' src={assets.header_img} alt='' />
       </div>
     </div>
   )

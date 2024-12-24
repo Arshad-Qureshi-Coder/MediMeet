@@ -46,8 +46,11 @@ const Header = () => {
   }, []); 
 
   return (
-    <header className={`bg-bgbackColor z-50 ${isScrolled ? 'fixed top-0 left-0 w-full shadow ' : ''}`}>
-  <div className="flex items-center justify-between py-4 px-4 md:px-8">
+    <header className={`bg-bgbackColor z-50 w-full transition-all duration-500 ease-in-out ${
+      isScrolled ? 'fixed top-0 left-0 shadow h-[100px]' : 'h-[auto]'
+    }`}
+    >
+  <div className="container flex items-center justify-between py-4 px-4 md:px-8">
     {/* Left: Logo or Menu Icon */}
     <div className="flex items-center ">
       <button
@@ -73,7 +76,7 @@ const Header = () => {
       <img
         src="/images/assets/medi-meet-removebg.png"
         alt="Logo"
-        className="w-50 h-auto  md:w-50 md:h-30 ml-3"
+        className="w-50 h-auto  md:w-50 md:h-30 "
       />
     </div>
 

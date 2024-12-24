@@ -2,17 +2,9 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div style={{
-        hetight:'40vh',
-        width:'100%',}}>
+    <div className="h-[40vh] w-full">
         <div 
-        style={{
-           borderBottom:'1px solid #e5e7eb',
-            display:'flex',
-            justifyContent:'space-between',
-            marginTop:"12rem",
-            paddingBottom:'10px'
-        }}>
+        className="container border-b border-gray-300 flex justify-between mt-[12rem] pb-2 ">
         <div>
         <img
             src="/images/assets/medi-meet-removebg.png"
@@ -26,7 +18,7 @@ const Footer = () => {
           </p>
         </div>
         <div>
-            <h1  style={{fontSize:'25px'}}>COMPANY</h1>
+            <h1  className='text-[25px] md: text-[20px]'>COMPANY</h1>
             <div>
                 <ul>
                     <li>Home</li>
@@ -37,7 +29,7 @@ const Footer = () => {
             </div>
         </div>
         <div>
-        <h1 style={{fontSize:'25px'}}>GET IN TOUCH</h1>
+        <h1 className='text-[25px] md: text-[20px]'>GET IN TOUCH</h1>
             <div>
                 <ul>
                     <li>
