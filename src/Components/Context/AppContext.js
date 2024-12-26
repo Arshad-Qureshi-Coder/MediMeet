@@ -1,13 +1,14 @@
 import { createContext } from "react";
 
-import { doctors } from "../../assets/assets";
+import { doctors, specialityData } from "../../assets/assets";
 
 export const AppContext = createContext();
 
 const AppcontextProvider = (props) => {
     
     const value={
-        doctors
+        doctors,
+        specialityData
     }
     return(
         <AppContext.Provider value={value}>
