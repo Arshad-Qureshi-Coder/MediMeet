@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className="h-auto w-full">
+    <div className="h-auto w-full bg-[#eaecee] p-3 mt-5">
   <div className="container  border-b border-gray-300 flex flex-wrap lg:flex-nowrap justify-between  mt-[12rem] pb-2">
      
      {/* Logo and Description  */}

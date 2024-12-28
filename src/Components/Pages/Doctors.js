@@ -26,11 +26,11 @@ const Doctors = () => {
     <section class="container mx-auto px-4 py-10">
     {/* SPECIALITY */}
     <h2 class="text-2xl font-semibold mb-4">Specialities</h2>
-    <div class="flex flex-wrap justify-center gap-2">
+    <div class="flex flex-wrap justify-center gap-2 ">
       {specialityData.map((item, index) => (
         <button
           key={index}
-          class="text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-green-500 active:bg-gray-300"
+          class="text-gray-700 py-2 px-4 rounded-lg border border-blue-900 hover:bg-gray-200 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-green-500 active:bg-gray-300"
           onClick={() => filterDoctors(item.speciality)}
         >
           {item.speciality}
@@ -40,7 +40,7 @@ const Doctors = () => {
   
     {/* DOCTORS */}
     <h2 class="text-2xl font-semibold mt-8 mb-4">Doctors</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div class="w-full grid grid-cols-auto gap-4 pt-5 gap-y-6 px-3 sm:px-0'">
     {filteredDoctors.map((item, index)=>(
          <div key={index} onClick={()=>navigate(`/appointment/${item._id}`) } className="border border-blue-200 rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500" > 
             <img src={item.image} alt="Card Image" className="bg-blue-50" />

@@ -4,7 +4,7 @@ import { assets } from '../assets/assets'
 const Banner = () => {
   return (
     // bg-gradient-to-r from-[#e3fcef] to-[#17bf8f] shadow
-    <div className='flex flex-col mt-5 bg-gradient-to-r from-gray-200 to-gray  md:flex-row flex-wrap px-6 md:px-10 lg:px-20  text-white font-semibold rounded-lg  hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-opacity-75'>
+    <div className='flex flex-col  bg-gradient-to-r from-gray-200 to-gray  md:flex-row flex-wrap px-6 md:px-10 lg:px-20  text-white font-semibold   hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-opacity-75'>
       {/* -------left-side------ */}
       <div className='md:w-1/2 flex flex-col items-start justify-center gap-4 py-10 m-auto md:py-[10vw] md:mb-[-30px]'>
         <p className='text-3xl md:text-4xl lg:text-5xl text-gray-500 font-bold leading-tight md:leading-tight lg:leading-tight '>

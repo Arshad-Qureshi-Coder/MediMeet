@@ -6,7 +6,7 @@ import Appointment from '../Appointment'
 
 const Home = () => {
   return (
-    <div className='container mt-5'>
+    <div className=' '>
       {/* Banner */}
       <Banner/>
       {/* Find by Speciality */}
