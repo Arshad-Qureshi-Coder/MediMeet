@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className="h-auto w-full bg-[#eaecee] p-3 mt-5">
+    <div className="h-auto w-full bg-[#eaecee] p-1 mt-[100px]">
   <div className="container  border-b border-gray-300 flex flex-wrap lg:flex-nowrap justify-between  mt-[12rem] pb-2">
      
      {/* Logo and Description  */}
@@ -23,10 +23,10 @@ const Footer = () => {
     </div>
 
      {/* Company Section */}
-    <div className="w-full lg:w-1/3 mb-6 lg:mb-0">
-      <h1 className="text-[25px] md:text-[20px]">COMPANY</h1>
-      <div>
-        <ul>
+    <div className="w-full  lg:w-1/3 mb-6 lg:mb-0">
+      <h1 className="text-[25px] text-center md:text-[20px]">COMPANY</h1>
+      <div className='flex justify-center items-center'>
+        <ul >
           <li>Home</li>
           <li>About us</li>
           <li>Delivery</li>
@@ -37,8 +37,8 @@ const Footer = () => {
 
      {/* Get in Touch Section  */}
     <div className="w-full lg:w-1/3">
-      <h1 className="text-[25px] md:text-[20px]">GET IN TOUCH</h1>
-      <div>
+      <h1 className="text-[25px] text-center md:text-[20px]">GET IN TOUCH</h1>
+      <div className='flex justify-center items-center'>
         <ul>
           <li>+0-000-000-000</li>
           <li>

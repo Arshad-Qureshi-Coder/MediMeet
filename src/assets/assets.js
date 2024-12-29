@@ -40,6 +40,9 @@ import docLoginImg from './doc-login-img1.png'
 import appoint2 from './appoint-2.png'
 import doc00 from './doc_00.jpg'
 import bg_hexa from './Hexa_bg.jpg'
+import banner_bg_img_1 from './banner_bg_img_1.png'
+import banner_bg_img from './banner_bg_img.png'
+// import banner_bg_img_rev from './banner_bg_img_rev.png'
 
 
 export const assets = {
@@ -63,7 +66,11 @@ export const assets = {
     docLoginImg,
     appoint2,
     doc00,
-    bg_hexa
+    bg_hexa,
+    banner_bg_img_1,
+    banner_bg_img
+    // banner_bg_img_rev,
+
 }
 
 export const specialityData = [

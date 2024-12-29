@@ -46,7 +46,7 @@ const Header = () => {
   }, []); 
 
   return (
-    <header className={`bg-bgbackColor z-50 w-full transition-all duration-500 ease-in-out ${
+    <header className={`bg-[#eaecee] z-50 w-full transition-all duration-500 ease-in-out ${
       isScrolled ? 'fixed top-0 left-0 shadow h-[100px]' : 'h-[auto]'
     }`}
     >
