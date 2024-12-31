@@ -42,7 +42,7 @@ import doc00 from './doc_00.jpg'
 import bg_hexa from './Hexa_bg.jpg'
 import banner_bg_img_1 from './banner_bg_img_1.png'
 import banner_bg_img from './banner_bg_img.png'
-// import banner_bg_img_rev from './banner_bg_img_rev.png'
+import about_us from './about_us.svg'
 
 
 export const assets = {
@@ -68,7 +68,8 @@ export const assets = {
     doc00,
     bg_hexa,
     banner_bg_img_1,
-    banner_bg_img
+    banner_bg_img,
+    about_us
     // banner_bg_img_rev,
 
 }

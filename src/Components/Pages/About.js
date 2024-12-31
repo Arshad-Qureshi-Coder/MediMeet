@@ -1,4 +1,5 @@
 import React from 'react'
+import { assets } from '../../assets/assets';
 
 const About = () => {
   return (
@@ -13,9 +14,9 @@ const About = () => {
             We believe in empowering individuals to take control of their health. MediMeet provides a user-friendly platform with a wide range of features, including online consultations, appointment scheduling, and access to medical information.
           </p>
         </div>
-        <div className="md:w-1/2 mt-6 md:mt-0">
+        <div className="md:w-1/2 bg- mt-6 md:mt-0 ">
           <img 
-            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjUwIiBoZWlnaHQ9IjIwMCIgcj0iMCIgc3Ryb2tlPSIjMDAwIiBmaWxsPSIjZ2VjIj48L3JlY3Q+PC9zdmc+"></img> 
+            src={assets.about_us}/>
           {/* Replace with your AI-generated image URL or base64 encoded string */}
         </div>
       </div>
