@@ -4,7 +4,7 @@ import group_profiles from './group_profiles.png'
 import profile_pic from './profile_pic.png'
 import contact_image from './contact_image.png'
 import about_image from './about_image.png'
-import logo from './logo.svg'
+import medimeet_logo from './medimeet_logo.png'
 import dropdown_icon from './dropdown_icon.svg'
 import menu_icon from './menu_icon.svg'
 import cross_icon from './cross_icon.png'
@@ -42,14 +42,15 @@ import doc00 from './doc_00.jpg'
 import bg_hexa from './Hexa_bg.jpg'
 import banner_bg_img_1 from './banner_bg_img_1.png'
 import banner_bg_img from './banner_bg_img.png'
-import about_us from './about_us.svg'
+import about_us from './about_Us.png'
+import medimeet_name from './medimeet_name.png'
 
 
 export const assets = {
     appointment_img,
     header_img,
     group_profiles,
-    logo,
+    medimeet_logo,
     chats_icon,
     verified_icon,
     info_icon,
@@ -69,7 +70,8 @@ export const assets = {
     bg_hexa,
     banner_bg_img_1,
     banner_bg_img,
-    about_us
+    about_us,
+    medimeet_name
     // banner_bg_img_rev,
 
 }

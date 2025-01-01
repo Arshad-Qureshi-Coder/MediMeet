@@ -74,10 +74,11 @@ const Header = () => {
 
       </button>
       <img
-        src="/images/assets/medi-meet-removebg.png"
-        alt="Logo"
-        className="w-50 h-auto  md:w-50 md:h-30 "
-      />
+  src={assets.medimeet_logo}
+  alt="Logo"
+  className="w-50 h-auto mx-auto md:mx-0 md:w-50 md:h-30"
+/>
+
     </div>
 
     {/* Center: Navigation Links */}
