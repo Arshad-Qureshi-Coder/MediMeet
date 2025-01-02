@@ -50,65 +50,71 @@ const Header = () => {
       isScrolled ? 'fixed top-0 left-0 shadow h-[100px]' : 'h-[auto]'
     }`}
     >
-  <div className="container flex items-center justify-between py-4 px-4 md:px-8">
+  <div className="container flex items-center justify-between py-4 px-4 ">
     {/* Left: Logo or Menu Icon */}
-    <div className="flex items-center ">
+    <div className="flex items-center w-13">
       <button
-        className="block md:hidden text-gray-700 focus:outline-none"
+        className="w-10 h-10 text-center block md:hidden text-white focus:outline-none"
         onClick={toggleMenu}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="2"
-          stroke="currentColor"
-          className="w-6 h-6" 
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
-
+        <img src={assets.menu_icon}/>
       </button>
       <img
   src={assets.medimeet_logo}
   alt="Logo"
-  className="w-50 h-auto mx-auto md:mx-0 md:w-50 md:h-30"
+  className=" w-50 lg:mx-0  h-auto md:mx-0 md:50  md:h-50"
 />
 
     </div>
 
     {/* Center: Navigation Links */}
-    <div className="hidden md:flex items-center space-x-6">
+    <div className="hidden md:flex items-center space-x-2">
       <NavLink
         to="/"
-        className="text-lg text-gray-900 no-underline hover:text-customGreen"
-        activeClassName="font-bold text-customGreen"
-        exact
+        className={({ isActive }) =>
+          `text-lg no-underline hover:text-customGreen px-3 py-2 rounded-full ${
+            isActive
+              ? "bg-customGreen text-white border border-lightGreen"
+              : "text-gray-900"
+          }`
+        }
+        exact="true"
       >
         HOME
       </NavLink>
       <NavLink
         to="/doctors"
-        className="text-lg text-gray-900 no-underline hover:text-customGreen"
-        activeClassName="font-bold text-customGreen"
+        className={({ isActive }) =>
+          `text-lg no-underline hover:text-customGreen px-3 py-2 rounded-full ${
+            isActive
+              ? "bg-customGreen text-white border border-lightGreen"
+              : "text-gray-900"
+          }`
+        }
       >
         DOCTORS
       </NavLink>
       <NavLink
         to="/about"
-        className="text-lg text-gray-900 no-underline hover:text-customGreen"
-        activeClassName="font-bold text-customGreen"
+        className={({ isActive }) =>
+          `text-lg no-underline hover:text-customGreen px-3 py-2 rounded-full ${
+            isActive
+              ? "bg-customGreen text-white border border-lightGreen"
+              : "text-gray-900"
+          }`
+        }
       >
         ABOUT
       </NavLink>
       <NavLink
         to="/contact"
-        className="text-lg text-gray-900 no-underline hover:text-customGreen"
-        activeClassName="font-bold text-customGreen"
+        className={({ isActive }) =>
+          `text-lg no-underline hover:text-customGreen px-3 py-2 rounded-full ${
+            isActive
+              ? "bg-customGreen text-white border border-lightGreen"
+              : "text-gray-900"
+          }`
+        }
       >
         CONTACT
       </NavLink>
@@ -165,18 +171,35 @@ const Header = () => {
 
   {/* Small Screen Menu */}
   {showMenu && (
-    <div
-    className={`fixed top-0 left-0 h-full bg-white shadow-md transform ${
+  <div
+    className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform ${
       showMenu ? 'translate-x-0' : '-translate-x-full'
     } transition-transform duration-300 ease-in-out z-50`}
   >
-    <ul className="space-y-4 text-center py-4">
+    {/* Sidebar Header */}
+    <div className="flex items-center justify-between p-4 border-b border-gray-200">
+      <h1 className="text-xl font-bold text-gray-900">Menu</h1>
+      <button
+        onClick={toggleMenu}
+        className="text-gray-500 hover:text-red-500 focus:outline-none"
+      >
+        <img src={assets.cross_icon}/>
+      </button>
+    </div>
+
+    {/* Navigation Links */}
+    <ul className="space-y-6 p-6">
       <li>
         <NavLink
           to="/"
-          className="block text-lg text-gray-900 hover:text-customGreen"
-          activeClassName="font-bold text-customGreen"
-          exact
+          className={({ isActive }) =>
+            `block text-lg font-medium py-2 px-4 rounded-lg transition-colors ${
+              isActive
+                ? 'bg-customGreen text-white'
+                : 'text-gray-900 hover:bg-gray-100 hover:text-customGreen'
+            }`
+          }
+          exact="true"
         >
           HOME
         </NavLink>
@@ -184,8 +207,13 @@ const Header = () => {
       <li>
         <NavLink
           to="/doctors"
-          className="block text-lg text-gray-900 hover:text-customGreen"
-          activeClassName="font-bold text-customGreen"
+          className={({ isActive }) =>
+            `block text-lg font-medium py-2 px-4 rounded-lg transition-colors ${
+              isActive
+                ? 'bg-customGreen text-white'
+                : 'text-gray-900 hover:bg-gray-100 hover:text-customGreen'
+            }`
+          }
         >
           DOCTORS
         </NavLink>
@@ -193,8 +221,13 @@ const Header = () => {
       <li>
         <NavLink
           to="/about"
-          className="block text-lg text-gray-900 hover:text-customGreen"
-          activeClassName="font-bold text-customGreen"
+          className={({ isActive }) =>
+            `block text-lg font-medium py-2 px-4 rounded-lg transition-colors ${
+              isActive
+                ? 'bg-customGreen text-white'
+                : 'text-gray-900 hover:bg-gray-100 hover:text-customGreen'
+            }`
+          }
         >
           ABOUT
         </NavLink>
@@ -202,23 +235,28 @@ const Header = () => {
       <li>
         <NavLink
           to="/contact"
-          className="block text-lg text-gray-900 hover:text-customGreen"
-          activeClassName="font-bold text-customGreen"
+          className={({ isActive }) =>
+            `block text-lg font-medium py-2 px-4 rounded-lg transition-colors ${
+              isActive
+                ? 'bg-customGreen text-white'
+                : 'text-gray-900 hover:bg-gray-100 hover:text-customGreen'
+            }`
+          }
         >
           CONTACT
         </NavLink>
       </li>
     </ul>
 
-    {/* Close Button */}
-    <button
-      onClick={toggleMenu}
-      className="absolute top-4 right-4 text-gray-900 hover:text-customGreen focus:outline-none"
-    >
-      ✕ {/* You can replace this with a close icon */}
-    </button>
+    {/* Footer Section */}
+    <div className="absolute bottom-4 left-0 w-full px-6">
+      <p className="text-sm text-gray-500 text-center">
+        © 2024 MediMeet.dev
+      </p>
+    </div>
   </div>
-  )}
+)}
+
 </header>
 
   );
