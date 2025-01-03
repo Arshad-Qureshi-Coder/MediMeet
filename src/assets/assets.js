@@ -5,6 +5,7 @@ import profile_pic from './profile_pic.png'
 import contact_image from './contact_image.png'
 import about_image from './about_image.png'
 import medimeet_logo from './medimeet_logo.png'
+import side_bar_logo from './white_logo.png'
 import dropdown_icon from './dropdown_icon.svg'
 import menu_icon from './icon-menu.png'
 import cross_icon from './icon-cross.png'
@@ -71,7 +72,8 @@ export const assets = {
     banner_bg_img_1,
     banner_bg_img,
     about_us,
-    medimeet_name
+    medimeet_name,
+    side_bar_logo,
     // banner_bg_img_rev,
 
 }

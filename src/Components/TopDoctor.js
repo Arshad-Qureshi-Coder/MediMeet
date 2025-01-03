@@ -8,7 +8,7 @@ const TopDoctor = () => {
   const navigate = useNavigate();
   const {doctors} = useContext(AppContext);
   return (
-    <div className='flex flex-col items-center bg-[#f8f9f9] mt-[50px] p-4 gap-4 my-16 text-gray-900 '>
+    <div className='container flex flex-col items-center bg-[#f8f9f9] mt-[50px] p-4 gap-4 my-16 text-gray-900 '>
             <h1 className='text-3xl font-medium mb-0'>Top Doctors to Book</h1>
             <p className='sm:w1/3 text-center text-sm'>Simply browse through our extensive list of trusted doctors.</p>
     <div className='w-full grid grid-cols-auto gap-4 pt-5 gap-y-6 px-3 sm:px-0'>

@@ -50,7 +50,7 @@ const Header = () => {
       isScrolled ? 'fixed top-0 left-0 shadow h-[100px]' : 'h-[auto]'
     }`}
     >
-  <div className="container flex items-center justify-between py-4 px-4 ">
+  <div className=" flex items-center justify-between py-4 px-4 ">
     {/* Left: Logo or Menu Icon */}
     <div className="flex items-center w-13">
       <button
@@ -139,12 +139,14 @@ const Header = () => {
               <NavLink
                 to="/profile"
                 className="block px-4 py-3 text-md text-gray-500 font-bold hover:bg-gray-100 rounded-t-lg transition-colors no-underline"
+                onClick={() => setIsOpen(false)}
               >
                 My Profile
               </NavLink>
               <NavLink
                 to="/appointments"
                 className="block px-4 py-3 text-md text-gray-500 font-bold hover:bg-gray-100 transition-colors no-underline"
+                onClick={() => setIsOpen(false)}
               >
                 My Appointments
               </NavLink>
@@ -152,6 +154,7 @@ const Header = () => {
                 to="/login"
                 onClick={() => setIsOpen(false)}
                 className="block px-4 py-3 text-md text-red-500 font-bold hover:bg-gray-100 border-b border-gray-300 rounded-b-lg transition-colors no-underline"
+                
               >
                 Logout
               </NavLink>
@@ -172,34 +175,37 @@ const Header = () => {
   {/* Small Screen Menu */}
   {showMenu && (
   <div
-    className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform ${
+    className={`fixed bg-white top-0 left-0 h-full w-72  shadow-lg transform ${
       showMenu ? 'translate-x-0' : '-translate-x-full'
     } transition-transform duration-300 ease-in-out z-50`}
   >
     {/* Sidebar Header */}
     <div className="flex items-center justify-between p-4 border-b border-gray-200">
-      <h1 className="text-xl font-bold text-gray-900">Menu</h1>
+      {/* <h1 className="text-xl font-bold text-gray-900">Menu</h1> */}
+      <img src={assets.medimeet_logo} className='w-[200px] bg-white rounded'/>
       <button
         onClick={toggleMenu}
         className="text-gray-500 hover:text-red-500 focus:outline-none"
       >
-        <img src={assets.cross_icon}/>
+        <img src={assets.cross_icon} className='bg-white rounded'/>
       </button>
     </div>
 
     {/* Navigation Links */}
-    <ul className="space-y-6 p-6">
+    <ul className="  p-0">
       <li>
         <NavLink
           to="/"
           className={({ isActive }) =>
-            `block text-lg font-medium py-2 px-4 rounded-lg transition-colors ${
+            `block h-16 pt-3 px-5 text-lg font-medium   border-b transition-colors no-underline ${
+            // `block text-lg font-medium py-2 px-4 rounded-lg transition-colors ${
               isActive
                 ? 'bg-customGreen text-white'
                 : 'text-gray-900 hover:bg-gray-100 hover:text-customGreen'
             }`
           }
           exact="true"
+  onClick={() => setShowMenu(false)}
         >
           HOME
         </NavLink>
@@ -208,12 +214,13 @@ const Header = () => {
         <NavLink
           to="/doctors"
           className={({ isActive }) =>
-            `block text-lg font-medium py-2 px-4 rounded-lg transition-colors ${
+            `block h-16 pt-3 px-5 text-lg font-medium   border-b transition-colors no-underline ${
               isActive
                 ? 'bg-customGreen text-white'
                 : 'text-gray-900 hover:bg-gray-100 hover:text-customGreen'
             }`
           }
+          onClick={() => setShowMenu(false)}
         >
           DOCTORS
         </NavLink>
@@ -222,12 +229,13 @@ const Header = () => {
         <NavLink
           to="/about"
           className={({ isActive }) =>
-            `block text-lg font-medium py-2 px-4 rounded-lg transition-colors ${
+            `block h-16 pt-3 px-5 text-lg font-medium   border-b transition-colors no-underline ${
               isActive
                 ? 'bg-customGreen text-white'
                 : 'text-gray-900 hover:bg-gray-100 hover:text-customGreen'
             }`
           }
+          onClick={() => setShowMenu(false)}
         >
           ABOUT
         </NavLink>
@@ -236,12 +244,13 @@ const Header = () => {
         <NavLink
           to="/contact"
           className={({ isActive }) =>
-            `block text-lg font-medium py-2 px-4 rounded-lg transition-colors ${
+            `block h-16 pt-3 px-5 text-lg font-medium   border-b transition-colors no-underline ${
               isActive
                 ? 'bg-customGreen text-white'
                 : 'text-gray-900 hover:bg-gray-100 hover:text-customGreen'
             }`
           }
+          onClick={() => setShowMenu(false)}
         >
           CONTACT
         </NavLink>
@@ -249,8 +258,8 @@ const Header = () => {
     </ul>
 
     {/* Footer Section */}
-    <div className="absolute bottom-4 left-0 w-full px-6">
-      <p className="text-sm text-gray-500 text-center">
+    <div className="absolute h-16 pt-4 px-5 bg-customGreen bottom-4 left-0 w-full px-6">
+      <p className="text-sm text-white text-center">
         © 2024 MediMeet.dev
       </p>
     </div>

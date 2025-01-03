@@ -1,67 +1,134 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { specialityData } from '../assets/assets'
 import { Link } from 'react-router-dom'
 
 const Speciality = () => {
-  return (
-    <div className='flex flex-col items-center gap-4 py-16 text-gray-800' id='speciality'>   
-          <h1 className='text-3xl font-medium'> Find by Speciality</h1>
-          <p className='sm:w1/3 text-center text-sm'>Simply browse through our extensive list of trusted doctors,
-            <br /> schedule your appointment hassle-free.</p>   
-        {/* <div className='flex items-center justify-center space-x-4 mt-5'>
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const containerRef = useRef();
 
-          <div className="text-center hover:scale-105 transition-transform duration-300 ">
-            <img
-              src="/images/assets/assets_frontend/General_physician.svg" alt="General-Physician"
-              className="h-24 mx-auto "
-            />
-            <p className="text-sm mt-2 font-bold">General Physician</p>
-          </div>
-          <div className="text-center hover:scale-105 transition-transform duration-300 ">
-            <img
-              src='/images/assets/assets_frontend/Gynecologist.svg' alt='Gynecologist'
-              className="h-24 mx-auto "
-            />
-            <p className="text-sm mt-2 font-bold">Gynecologist</p>
-          </div>
-          <div className="text-center hover:scale-105 transition-transform duration-300 ">
-            <img src='/images/assets/assets_frontend/Dermatologist.svg' alt='Dermatologist'
-              className="h-24 mx-auto "
-            />
-            <p className="text-sm mt-2 font-bold">Dermatologist</p>
-          </div>
-          <div className="text-center hover:scale-105 transition-transform duration-300 ">
-            <img
-              src='/images/assets/assets_frontend/Pediatricians.svg' alt='Pediatricians'
-              className="h-24 mx-auto "
-            />
-            <p className="text-sm mt-2 font-bold">Pediatricians</p>
-          </div>
-          <div className="text-center hover:scale-105 transition-transform duration-300 ">
-            <img
-              src='/images/assets/assets_frontend/Neurologist.svg' alt='Neurologist'
-              className="h-24 mx-auto "
-            />
-            <p className="text-sm mt-2 font-bold">Neurologist</p>
-          </div>
-          <div className="text-center hover:scale-105 transition-transform duration-300 ">
-            <img
-              src='/images/assets/assets_frontend/Gastroenterologist.svg' alt='Gastroenterologist'
-              className="h-24 mx-auto "
-            />
-            <p className="text-sm mt-2 font-bold">Gastroenterologist</p>
-          </div>
-        </div> */}
-        <div className='flex  sm:justify-center gap-4 pt-5 w-full overflow-scroll '>
-          {specialityData.map((item, index)=>( 
-            <Link onClick={()=>window.scrollTo(0,0)} className='flex flex-col items-center border p-4  rounded text-gray-700 font-bold text-xs no-underline cursor-pointer flex-shrink-0 hover:translate-y-[-10px] transition-all duration-500' key={index} to={`/doctors/${item.speciality}`}>
-              <img className='w-16 sm:w-24 mb-2' src={item.image} alt=''/>
-              <p>{item.speciality}</p>
-            </Link>
+  const handleScroll = (direction) => {
+    const container = containerRef.current;
+    const itemWidth = container.firstChild.offsetWidth + 24; // Adjust for item width and gap
+
+    if (direction === "right") {
+      container.scrollBy({ left: itemWidth, behavior: "smooth" });
+
+      // Reorder after scroll completes
+      setTimeout(() => {
+        if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+          const firstItem = container.firstChild;
+          container.appendChild(firstItem.cloneNode(true));
+          container.removeChild(firstItem);
+          container.scrollLeft -= itemWidth;
+        }
+      }, 400); // Matches the scroll animation duration
+    } else if (direction === "left") {
+      if (container.scrollLeft <= 0) {
+        const lastItem = container.lastChild;
+        container.prepend(lastItem.cloneNode(true));
+        container.removeChild(lastItem);
+        container.scrollLeft += itemWidth; // Adjust scroll position
+      }
+
+      container.scrollBy({ left: -itemWidth, behavior: "smooth" });
+    }
+  };
+
+  return (
+    <div className="flex flex-col items-center py-16 bg-gray-100 text-gray-800" id="speciality">
+      {/* Section Header */}
+      <h1 className="text-4xl font-bold text-gray-900">Find by Speciality</h1>
+      <p className="mt-4 text-center text-gray-600 sm:w-2/3">
+        Explore our wide range of trusted doctors by specialty. Find the perfect match and book your appointment with ease.
+      </p>
+
+      {/* Slider Section */}
+      <div className="relative w-full max-w-6xl mt-10">
+        {/* Left Arrow */}
+        <button
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 text-gray-700 bg-bgCGreen rounded-full shadow-md flex items-center justify-center hover:bg-customGreen hover:text-white transition duration-300 z-10"
+          onClick={() => handleScroll("left")}
+        >
+          &#8592; {/* Left Arrow */}
+        </button>
+
+        {/* Right Arrow */}
+        <button
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 text-gray-700 bg-bgCGreen rounded-full shadow-md flex items-center justify-center hover:bg-customGreen hover:text-white transition duration-300 z-10"
+          onClick={() => handleScroll("right")}
+        >
+          &#8594; {/* Right Arrow */}
+        </button>
+
+        {/* Items Container */}
+        <div
+          ref={containerRef}
+          className="flex gap-6 px-8 overflow-x-scroll scrollbar-hide w-full"
+        >
+          {specialityData.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center p-6 bg-white border border-gray-200 rounded-lg shadow-md w-48 flex-shrink-0 transform transition-transform duration-500"
+            >
+              <img
+                src={item.image}
+                alt={item.speciality}
+                className="w-20 h-20 object-cover rounded-full mb-4 border-2 border-gray-200"
+              />
+              <p className="text-center font-semibold text-gray-800">{item.speciality}</p>
+            </div>
           ))}
         </div>
       </div>
-  )
-}
+    </div>
+
+  );
+};
 
 export default Speciality
+
+
+
+
+ // <div className='flex flex-col items-center gap-4 py-16 text-gray-800' id='speciality'>
+    //   <h1 className='text-3xl font-medium'>Find by Speciality</h1>
+    //   <p className='sm:w-1/3 text-center text-sm'>
+    //     Simply browse through our extensive list of trusted doctors,
+    //     <br /> schedule your appointment hassle-free.
+    //   </p>
+
+    //   <div className='relative w-full overflow-hidden'>
+    //     <button
+    //       className='absolute right-[90px] w-10 text-customGreen text-lg z-10 bg-white p-2 rounded-full shadow hover:bg-customGreen hover:text-white'
+    //       onClick={() => handleScroll('left')}
+    //     >
+    //       &#8592; 
+    //     </button>
+
+    //     <button
+    //       className='absolute right-9 w-10 text-customGreen text-lg z-10 bg-white p-2 rounded-full shadow hover:bg-customGreen hover:text-white '
+    //       onClick={() => handleScroll('right')}
+    //     >
+    //       &#8594; 
+    //     </button>
+
+    //     <div
+    //       ref={containerRef}
+    //       className='flex sm:justify-center gap-4 pt-5 w-full overflow-x-scroll scrollbar-hide'
+    //     >
+    //       {specialityData.map((item, index) => (
+    //         <Link
+    //           onClick={() => window.scrollTo(0, 0)}
+    //           className='flex flex-col items-center border p-4 rounded text-gray-700 font-bold text-xs no-underline cursor-pointer flex-shrink-0 hover:translate-y-[-10px] transition-all duration-500'
+    //           key={index}
+    //           to={`/doctors/${item.speciality}`}
+    //         >
+    //           <img className='w-16 sm:w-24 mb-2' src={item.image} alt='' />
+    //           <p>{item.speciality}</p>
+    //         </Link>
+    //       ))}
+    //     </div>
+
+      
+    //   </div>
+    // </div>

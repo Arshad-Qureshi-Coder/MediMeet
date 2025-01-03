@@ -7,7 +7,7 @@ const About = () => {
 
     <div className=" container mx-auto px-4 py-16">
       
-        <h1 className="text-3xl text-gray-500  mb-4">About<span className='font-bold text-customGreen'> MediMeet</span></h1>
+        <h1 className="text-3xl text-gray-500  mb-5">About<span className='font-bold text-customGreen'> MediMeet</span></h1>
         <div className=" bg-[#ecfbf8] shadow-md rounded-lg">
       {/* About Us Section */}
       <div className="relative flex flex-col bg-[#ecfbf8]  md:flex-row bg-[#cbf4ec] justify-between items-center max-w-6xl mx-auto  overflow-hidden">
@@ -34,7 +34,7 @@ const About = () => {
     </div>
 
       <div className="mt-16">
-        <h2 className="text-2xl font-bold mb-4">Why Choose <span className='font-bold text-customGreen'> MediMeet </span>?</h2>
+        <h2 className="text-2xl font-bold mb-5">Why Choose <span className='font-bold text-customGreen'> MediMeet </span>?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-gray-100 p-16 rounded-lg border shadow bg-[#ecfbf8]">
             {/* <AiOutlineHeart className="text-green-500 text-2xl mb-4" /> */}

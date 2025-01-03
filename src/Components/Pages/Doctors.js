@@ -39,7 +39,7 @@ const Doctors = () => {
     </div>
   
     {/* DOCTORS */}
-    <h2 class="text-2xl font-semibold mt-8 mb-4">Doctors</h2>
+    <h2 class="text-2xl font-semibold mt-8 mb-2">Doctors</h2>
     <div class="w-full grid grid-cols-auto gap-4 pt-5 gap-y-6 px-3 sm:px-0'">
     {filteredDoctors.map((item, index)=>(
          <div key={index} onClick={()=>navigate(`/appointment/${item._id}`) } className="border border-blue-200 rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500" > 

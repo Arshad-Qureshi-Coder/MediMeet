@@ -25,3 +25,26 @@
     animation: fadeIn 0.3s ease-in-out;
   }
   
+
+  /* Hide scrollbar */
+.relative.w-full.overflow-hidden::-webkit-scrollbar {
+  display: none;
+}
+.relative.w-full.overflow-hidden {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Animation for sliding */
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide {
+  animation: slide 15s linear infinite;
+}
