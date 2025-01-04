@@ -192,70 +192,74 @@ const Header = () => {
     </div>
 
     {/* Navigation Links */}
-    <ul className="  p-0">
-      <li>
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            `block h-16 pt-3 px-5 text-lg font-medium   border-b transition-colors no-underline ${
-            // `block text-lg font-medium py-2 px-4 rounded-lg transition-colors ${
-              isActive
-                ? 'bg-customGreen text-white'
-                : 'text-gray-900 hover:bg-gray-100 hover:text-customGreen'
-            }`
-          }
-          exact="true"
-  onClick={() => setShowMenu(false)}
-        >
-          HOME
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/doctors"
-          className={({ isActive }) =>
-            `block h-16 pt-3 px-5 text-lg font-medium   border-b transition-colors no-underline ${
-              isActive
-                ? 'bg-customGreen text-white'
-                : 'text-gray-900 hover:bg-gray-100 hover:text-customGreen'
-            }`
-          }
-          onClick={() => setShowMenu(false)}
-        >
-          DOCTORS
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/about"
-          className={({ isActive }) =>
-            `block h-16 pt-3 px-5 text-lg font-medium   border-b transition-colors no-underline ${
-              isActive
-                ? 'bg-customGreen text-white'
-                : 'text-gray-900 hover:bg-gray-100 hover:text-customGreen'
-            }`
-          }
-          onClick={() => setShowMenu(false)}
-        >
-          ABOUT
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/contact"
-          className={({ isActive }) =>
-            `block h-16 pt-3 px-5 text-lg font-medium   border-b transition-colors no-underline ${
-              isActive
-                ? 'bg-customGreen text-white'
-                : 'text-gray-900 hover:bg-gray-100 hover:text-customGreen'
-            }`
-          }
-          onClick={() => setShowMenu(false)}
-        >
-          CONTACT
-        </NavLink>
-      </li>
-    </ul>
+    <ul className="p-0">
+  <li>
+    <NavLink
+      to="/"
+      className={({ isActive }) =>
+        `flex items-center h-16 pt-3 px-5 text-lg font-medium border-b transition-colors no-underline ${
+          isActive
+            ? 'bg-customGreen text-white'
+            : 'text-gray-900 hover:bg-gray-100 hover:text-customGreen'
+        }`
+      }
+      exact="true"
+      onClick={() => setShowMenu(false)}
+    >
+      <i className="bi bi-house-door-fill mr-2"></i> {/* Home Icon */}
+      HOME
+    </NavLink>
+  </li>
+  <li>
+    <NavLink
+      to="/doctors"
+      className={({ isActive }) =>
+        `flex items-center h-16 pt-3 px-5 text-lg font-medium border-b transition-colors no-underline ${
+          isActive
+            ? 'bg-customGreen text-white'
+            : 'text-gray-900 hover:bg-gray-100 hover:text-customGreen'
+        }`
+      }
+      onClick={() => setShowMenu(false)}
+    >
+      <i className="bi bi-person-fill mr-2"></i> {/* Doctors Icon */}
+      DOCTORS
+    </NavLink>
+  </li>
+  <li>
+    <NavLink
+      to="/about"
+      className={({ isActive }) =>
+        `flex items-center h-16 pt-3 px-5 text-lg font-medium border-b transition-colors no-underline ${
+          isActive
+            ? 'bg-customGreen text-white'
+            : 'text-gray-900 hover:bg-gray-100 hover:text-customGreen'
+        }`
+      }
+      onClick={() => setShowMenu(false)}
+    >
+      <i className="bi bi-info-circle-fill mr-2"></i> {/* About Icon */}
+      ABOUT
+    </NavLink>
+  </li>
+  <li>
+    <NavLink
+      to="/contact"
+      className={({ isActive }) =>
+        `flex items-center h-16 pt-3 px-5 text-lg font-medium border-b transition-colors no-underline ${
+          isActive
+            ? 'bg-customGreen text-white'
+            : 'text-gray-900 hover:bg-gray-100 hover:text-customGreen'
+        }`
+      }
+      onClick={() => setShowMenu(false)}
+    >
+      <i className="bi bi-envelope-fill mr-2"></i> {/* Contact Icon */}
+      CONTACT
+    </NavLink>
+  </li>
+</ul>
+
 
     {/* Footer Section */}
     <div className="absolute h-16 pt-4 px-5 bg-customGreen bottom-4 left-0 w-full px-6">
