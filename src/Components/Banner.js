@@ -19,13 +19,21 @@ const Banner = () => {
           <p className='text-gray-900'> Simply browse through our extensive list of trusted doctors,<br className='hidden sm:block' />schedule your appointment hassle-free.</p>
         </div>
         <div className="flex justify-start sm:justify-center">
-  <a
+  {/* <a
     href="#speciality"
-    className="flex items-center no-underline gap-2 px-8 py-3 bg-[#17bf8f] text-white font-semibold rounded-lg shadow-md hover:scale-105 transition-all duration-300 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+    className="flex items-center no-underline gap-2 px-8 py-3 bg-[#17bf8f] text-white font-semibold rounded-lg shadow-md hover:scale-105 transition-all duration-300 hover:ring hover:ring-green-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
   >
     Book appointment
     <img className="w-3 filter invert" src={assets.arrow_icon} alt="" />
-  </a>
+  </a> */}
+
+<a
+href="#speciality"
+class="relative rounded no-underline px-5 py-2.5 overflow-hidden group bg-indigo-500 relative hover:bg-gradient-to-r hover:from-indigo-500 hover:to-indigo-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-indigo-400 transition-all ease-out duration-300">
+<span
+class="absolute right-0 w-8 h-40 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+<span class="relative text-base font-semibold">Book appointment</span>
+</a>
 </div>
 
       </div>
