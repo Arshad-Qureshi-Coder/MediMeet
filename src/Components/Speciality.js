@@ -46,18 +46,22 @@ const Speciality = () => {
       <div className="relative w-full max-w-6xl mt-10">
         {/* Left Arrow */}
         <button
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 text-gray-700 bg-bgCGreen rounded-full shadow-md flex items-center justify-center hover:bg-customGreen hover:text-white transition duration-300 z-10"
+          className="absolute left-2 top-1/2 -translate-y-1/2 w-12 h-12 text-gray-700 bg-light rounded-full shadow border flex items-center justify-center hover:bg-customGreen hover:text-white transition duration-300 z-10"
           onClick={() => handleScroll("left")}
         >
-          &#8592; {/* Left Arrow */}
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.0001 17.9996L8.99988 11.9994L15.0037 5.99561" stroke="black" stroke-width="null" stroke-linecap="round" stroke-linejoin="round" class="my-path"></path>
+          </svg> {/* Left Arrow */}
         </button>
 
         {/* Right Arrow */}
         <button
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 text-gray-700 bg-bgCGreen rounded-full shadow-md flex items-center justify-center hover:bg-customGreen hover:text-white transition duration-300 z-10"
+          className="absolute right-[-25px] top-1/2 -translate-y-1/2 w-12 h-12 text-gray-700 bg-light rounded-full shadow border flex items-center justify-center hover:bg-customGreen hover:text-white transition duration-300 z-10"
           onClick={() => handleScroll("right")}
         >
-          &#8594; {/* Right Arrow */}
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.00378 5.99561L15.004 11.9959L9.00024 17.9996" stroke="black" stroke-width="null" stroke-linecap="round" stroke-linejoin="round" class="my-path"></path>
+            </svg> {/* Right Arrow */}
         </button>
 
         {/* Items Container */}
