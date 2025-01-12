@@ -35,12 +35,18 @@ const Speciality = () => {
   };
 
   return (
-    <div className="flex flex-col items-center py-16 bg-gray-100 text-gray-800" id="speciality">
-      {/* Section Header */}
-      <h1 className="text-4xl font-bold text-gray-900">Find by Speciality</h1>
-      <p className="mt-4 text-center text-gray-600 sm:w-2/3">
-        Explore our wide range of trusted doctors by specialty. Find the perfect match and book your appointment with ease.
+    <section className='mt-[100px] mb-5'>
+      {/* <div className='flex flex-col justify-center  w-full text-center'> */}
+      <h1 className="text-5xl text-center font-bold text-gray-900">Find by Speciality</h1>
+      <p className="lg:w-full mt-4 text-center font-semibold text-gray-600 mb-3 md:text-center sm:w-full">
+        Explore our wide range of trusted doctors by specialty.
+        <br/> Find the perfect match and book your appointment with ease.
       </p>
+
+      {/* </div> */}
+
+    <div className="flex flex-col items-center bg-[#F2F6F6] py-16 bg-gray-100 text-gray-800" id="speciality">
+      {/* Section Header */}
 
       {/* Slider Section */}
       <div className="relative w-full max-w-6xl mt-10">
@@ -85,6 +91,7 @@ const Speciality = () => {
         </div>
       </div>
     </div>
+    </section>
 
   );
 };

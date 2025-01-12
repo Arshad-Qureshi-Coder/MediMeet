@@ -59,7 +59,7 @@ const Footer = () => {
 //   </div>
 // </div>
 
-<footer className="h-auto w-full bg-[#eaecee] p-6 mt-[10rem]">
+<footer className="h-auto w-full bg-[#F2F6F6] p-6 mt-[10rem]">
 <div className="container border-b border-gray-300 flex flex-wrap lg:flex-nowrap justify-between items-start max-w-6xl mx-auto pb-6">
   {/* Logo and Description */}
   <div className="w-full lg:w-1/3 mb-6 lg:mb-0  lg:text-left">

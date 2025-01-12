@@ -5,8 +5,8 @@ const Appointment = () => {
   return (
     <>
       <div
-        className="w-full bg-cover  mt-20 text-black font-semibold  hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-opacity-75"
-        style={{ backgroundImage: `linear-gradient(to right, #eaecee, rgba(234, 236, 238, 0)), url(${assets.banner_bg_img})` }}
+        className="w-full bg-cover  mt-[100px] text-black font-semibold  hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-opacity-75"
+        style={{ backgroundImage: ` url(${assets.banner_bg_img})` }}
       >
         {/* bg-gradient-to-r from-gray-200 to-gray */}
         <div className="flex flex-col lg:flex-row items-center justify-evenly font-bold ">

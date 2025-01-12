@@ -16,7 +16,7 @@ import LoginPage from './Components/Auth/Login';
 
 const App = () => {
   return (
-    <div className='bg-bgbackColor m-auto'>
+    <div className=' m-auto'>
       
       {/* <LoginPage/> */}
       {/* Header */}

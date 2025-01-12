@@ -4,8 +4,9 @@ import { assets } from '../assets/assets'
 const Banner = () => {
   return (
     // bg-gradient-to-r from-[#e3fcef] to-[#17bf8f] shadow
-    <div className='  w-full flex flex-col bg-cover   md:flex-row flex-wrap px-6 md:px-10 lg:px-20  text-white font-semibold   hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-opacity-75 '
-      style={{ backgroundImage: `linear-gradient(to right, #eaecee, rgba(234, 236, 238, 0)), url(${assets.banner_bg_img_1})` }}>
+    <div className='bg-[#F2F6F6]  w-full flex flex-col bg-cover   md:flex-row flex-wrap px-6 md:px-10 lg:px-20  text-white font-bold    '
+      // style={{ backgroundImage: `linear-gradient(to right, #eaecee, rgba(234, 236, 238, 0)), url(${assets.banner_bg_img_1})` }}
+      >
       {/* -------left-side------ */}
       <div className='md:w-1/2 flex flex-col items-start justify-center gap-4 py-10 m-auto md:py-[10vw] md:mb-[-30px]'>
         <p className='text-3xl md:text-4xl lg:text-5xl text-gray-500 font-bold leading-tight md:leading-tight lg:leading-tight '>

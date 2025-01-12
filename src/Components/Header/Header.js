@@ -46,8 +46,9 @@ const Header = () => {
   }, []); 
 
   return (
-    <header className={`bg-[#eaecee] z-50 w-full transition-all duration-500 ease-in-out ${
-      isScrolled ? 'fixed top-0 left-0 shadow h-[100px]' : 'h-[auto]'
+    // bg-[#eaecee]
+    <header className={`bg-[#F2F6F6] z-50 w-full transition-all duration-500 ease-in-out ${
+      isScrolled ? 'fixed top-0 left-0 shadow h-[100px] bg-[#F2F6F6]' : 'h-[auto] '
     }`}
     >
   <div className=" flex items-center justify-between py-4 px-4 ">
