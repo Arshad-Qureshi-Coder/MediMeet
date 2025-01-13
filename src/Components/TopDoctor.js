@@ -10,7 +10,9 @@ const TopDoctor = () => {
   return (
     <section className='mt-[100px] mb-5'>
       {/* <h1 className='text-3xl font-medium mb-0'>Top Doctors to Book</h1> */}
-      <h1 className="text-5xl  text-center font-bold text-gray-900">Top Doctors to Book</h1>
+      <h1 className="text-5xl  text-center font-bold text-gray-900">Top <span className="bg-gradient-to-r from-customGreen to-indigo-400 bg-clip-text text-transparent hover:from-indigo-400 hover:to-customGreen">
+      Doctors
+      </span> to Book</h1>
       <p className="lg:w-full mt-3 text-center font-semibold text-gray-600 mb-3 md:text-center sm:w-full">
       Simply browse through our extensive list of trusted doctors.
       </p>

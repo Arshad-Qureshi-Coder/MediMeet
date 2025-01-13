@@ -37,7 +37,10 @@ const Speciality = () => {
   return (
     <section className='mt-[100px] mb-5'>
       {/* <div className='flex flex-col justify-center  w-full text-center'> */}
-      <h1 className="text-5xl text-center font-bold text-gray-900">Find by Speciality</h1>
+      <h1 className="text-5xl text-center font-bold text-gray-900">Find by <span className="bg-gradient-to-r from-customGreen to-indigo-400 bg-clip-text text-transparent hover:from-indigo-400 hover:to-customGreen">
+  Speciality
+</span>
+</h1>
       <p className="lg:w-full mt-4 text-center font-semibold text-gray-600 mb-3 md:text-center sm:w-full">
         Explore our wide range of trusted doctors by specialty.
         <br/> Find the perfect match and book your appointment with ease.
