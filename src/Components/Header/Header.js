@@ -107,7 +107,7 @@ const Header = () => {
       >
         ABOUT
       </NavLink>
-      <NavLink
+      {/* <NavLink
         to="/contact"
         className={({ isActive }) =>
           `text-lg no-underline hover:text-customGreen px-3 py-2 rounded-full ${
@@ -118,6 +118,25 @@ const Header = () => {
         }
       >
         CONTACT
+      </NavLink> */}
+
+<NavLink
+  to="/contact"
+  className={({ isActive }) =>
+    `text-base font-semibold m-6 group relative w-max ${
+      isActive ? "text-customGreen no-underline" : "text-gray-900"
+    }`
+  }
+>
+  <span>CONTACT</span>
+  <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-3/6"></span>
+  <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-3/6"></span>
+</NavLink>
+
+      <NavLink>
+      <button type='button' class='py-2.5 px-6 text-sm border border-gray-300 rounded-full shadow-xs bg-white font-semibold text-gray-900 transition-all duration-500 hover:bg-gray-50'>
+        Admin
+        </button>
       </NavLink>
     </div>
 
