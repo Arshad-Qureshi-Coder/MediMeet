@@ -70,75 +70,72 @@ const Header = () => {
 
     {/* Center: Navigation Links */}
     <div className="hidden md:flex items-center space-x-2">
-      <NavLink
-        to="/"
-        className={({ isActive }) =>
-          `text-lg no-underline hover:text-customGreen px-3 py-2 rounded-full ${
-            isActive
-              ? "bg-customGreen text-white border border-lightGreen"
-              : "text-gray-900"
-          }`
-        }
-        exact="true"
-      >
-        HOME
-      </NavLink>
-      <NavLink
-        to="/doctors"
-        className={({ isActive }) =>
-          `text-lg no-underline hover:text-customGreen px-3 py-2 rounded-full ${
-            isActive
-              ? "bg-customGreen text-white border border-lightGreen"
-              : "text-gray-900"
-          }`
-        }
-      >
-        DOCTORS
-      </NavLink>
-      <NavLink
-        to="/about"
-        className={({ isActive }) =>
-          `text-lg no-underline hover:text-customGreen px-3 py-2 rounded-full ${
-            isActive
-              ? "bg-customGreen text-white border border-lightGreen"
-              : "text-gray-900"
-          }`
-        }
-      >
-        ABOUT
-      </NavLink>
-      {/* <NavLink
-        to="/contact"
-        className={({ isActive }) =>
-          `text-lg no-underline hover:text-customGreen px-3 py-2 rounded-full ${
-            isActive
-              ? "bg-customGreen text-white border border-lightGreen"
-              : "text-gray-900"
-          }`
-        }
-      >
-        CONTACT
-      </NavLink> */}
+  <NavLink
+    to="/"
+    className={({ isActive }) =>
+      `text-base font-semibold m-6 group relative w-max ${
+        isActive ? "text-customGreen no-underline" : "text-gray-900"
+      }`
+    }
+    exact="true"
+  >
+    <span>HOME</span>
+    <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-3/6"></span>
+    <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-3/6"></span>
+  </NavLink>
 
-<NavLink
-  to="/contact"
-  className={({ isActive }) =>
-    `text-base font-semibold m-6 group relative w-max ${
-      isActive ? "text-customGreen no-underline" : "text-gray-900"
-    }`
-  }
->
-  <span>CONTACT</span>
-  <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-3/6"></span>
-  <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-3/6"></span>
-</NavLink>
+  <NavLink
+    to="/doctors"
+    className={({ isActive }) =>
+      `text-base font-semibold m-6 group relative w-max ${
+        isActive ? "text-customGreen no-underline" : "text-gray-900"
+      }`
+    }
+  >
+    <span>DOCTORS</span>
+    <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-3/6"></span>
+    <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-3/6"></span>
+  </NavLink>
 
-      <NavLink>
-      <button type='button' class='py-2.5 px-6 text-sm border border-gray-300 rounded-full shadow-xs bg-white font-semibold text-gray-900 transition-all duration-500 hover:bg-gray-50'>
-        Admin
-        </button>
-      </NavLink>
-    </div>
+  <NavLink
+    to="/about"
+    className={({ isActive }) =>
+      `text-base font-semibold m-6 group relative w-max ${
+        isActive ? "text-customGreen no-underline" : "text-gray-900"
+      }`
+    }
+  >
+    <span>ABOUT</span>
+    <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-3/6"></span>
+    <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-3/6"></span>
+  </NavLink>
+
+  <NavLink
+    to="/contact"
+    className={({ isActive }) =>
+      `text-base font-semibold m-6 group relative w-max ${
+        isActive ? "text-customGreen no-underline" : "text-gray-900"
+      }`
+    }
+  >
+    <span>CONTACT</span>
+    <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-3/6"></span>
+    <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-3/6"></span>
+  </NavLink>
+
+  <NavLink
+    to="/admin"
+    className="m-6"
+  >
+    <button
+      type="button"
+      class="py-2.5 px-6 text-sm border border-gray-300 rounded-full shadow-xs bg-white font-semibold text-gray-900 transition-all duration-500 hover:bg-gray-50"
+    >
+      Admin
+    </button>
+  </NavLink>
+</div>
+
 
     {/* Right: Profile Image or Login */}
     <div className="flex items-center space-x-3">
