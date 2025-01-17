@@ -171,7 +171,7 @@ const Header = () => {
                 to="/login"
                 onClick={() => setIsOpen(false)}
                 className="block px-4 py-3 text-md text-red-500 font-bold hover:bg-gray-100 border-b border-gray-300 rounded-b-lg transition-colors no-underline"
-                
+                       
               >
                 Logout
               </NavLink>
