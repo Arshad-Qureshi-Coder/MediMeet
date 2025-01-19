@@ -214,7 +214,7 @@ const Header = () => {
     <NavLink
       to="/"
       className={({ isActive }) =>
-        `flex items-center h-16 pt-3 px-5 text-lg font-medium border-b transition-colors no-underline ${
+        `flex items-center h-[4rem]  px-5 text-lg font-medium border-b transition-colors no-underline ${
           isActive
             ? 'bg-customGreen text-white'
             : 'text-gray-900 hover:bg-gray-100 hover:text-customGreen'
@@ -231,7 +231,7 @@ const Header = () => {
     <NavLink
       to="/doctors"
       className={({ isActive }) =>
-        `flex items-center h-16 pt-3 px-5 text-lg font-medium border-b transition-colors no-underline ${
+        `flex items-center h-[4rem] px-5 text-lg font-medium border-b transition-colors no-underline ${
           isActive
             ? 'bg-customGreen text-white'
             : 'text-gray-900 hover:bg-gray-100 hover:text-customGreen'
@@ -247,7 +247,7 @@ const Header = () => {
     <NavLink
       to="/about"
       className={({ isActive }) =>
-        `flex items-center h-16 pt-3 px-5 text-lg font-medium border-b transition-colors no-underline ${
+        `flex items-center h-[4rem] px-5 text-lg font-medium border-b transition-colors no-underline ${
           isActive
             ? 'bg-customGreen text-white'
             : 'text-gray-900 hover:bg-gray-100 hover:text-customGreen'
@@ -263,7 +263,7 @@ const Header = () => {
     <NavLink
       to="/contact"
       className={({ isActive }) =>
-        `flex items-center h-16 pt-3 px-5 text-lg font-medium border-b transition-colors no-underline ${
+        `flex items-center h-[4rem] px-5 text-lg font-medium border-b transition-colors no-underline ${
           isActive
             ? 'bg-customGreen text-white'
             : 'text-gray-900 hover:bg-gray-100 hover:text-customGreen'
@@ -279,7 +279,7 @@ const Header = () => {
 
 
     {/* Footer Section */}
-    <div className="absolute h-16 pt-4 px-5 bg-customGreen bottom-4 left-0 w-full px-6">
+    <div className="absolute h-[4rem] flex items-center justify-center  bg-customGreen bottom-0 left-0  w-full ">
       <p className="text-sm text-white text-center">
         © 2024 MediMeet.dev
       </p>

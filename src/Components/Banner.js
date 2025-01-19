@@ -8,7 +8,7 @@ const Banner = () => {
       // style={{ backgroundImage: `linear-gradient(to right, #eaecee, rgba(234, 236, 238, 0)), url(${assets.banner_bg_img_1})` }}
       >
       {/* -------left-side------ */}
-      <div className='md:w-1/2 flex flex-col items-start justify-center gap-4 py-10 m-auto md:py-[10vw] md:mb-[-30px]'>
+      <div className='md:w-1/2 flex flex-col items-start justify-center gap-4 py-10 m-auto md:py-[10vw] md:mb-[-30px] md:text-center'>
         <p className='text-3xl md:text-4xl lg:text-5xl text-gray-500 font-bold leading-tight md:leading-tight lg:leading-tight '>
           <span className='text-[#17bf8f]'>Book</span> Appointment<br /> With
           <span className='text-[#17bf8f]'> Trusted Doctors</span>
