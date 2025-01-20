@@ -69,12 +69,12 @@ const Header = () => {
     </div>
 
     {/* Center: Navigation Links */}
-    <div className="hidden md:flex items-center space-x-2">
+    <div className=" w-[50%] gap-3 hidden md:flex items-center space-x-2">
   <NavLink
     to="/"
     className={({ isActive }) =>
-      `text-base font-semibold m-6 group relative w-max ${
-        isActive ? "text-customGreen no-underline" : "text-gray-900"
+      `text-base font-semibold  group relative no-underline  w-max ${
+        isActive ? "text-customGreen  " : "text-gray-900"
       }`
     }
     exact="true"
@@ -87,8 +87,8 @@ const Header = () => {
   <NavLink
     to="/doctors"
     className={({ isActive }) =>
-      `text-base font-semibold m-6 group relative w-max ${
-        isActive ? "text-customGreen no-underline" : "text-gray-900"
+      `text-base font-semibold  group relative no-underline w-max ${
+        isActive ? "text-customGreen " : "text-gray-900"
       }`
     }
   >
@@ -100,8 +100,8 @@ const Header = () => {
   <NavLink
     to="/about"
     className={({ isActive }) =>
-      `text-base font-semibold m-6 group relative w-max ${
-        isActive ? "text-customGreen no-underline" : "text-gray-900"
+      `text-base font-semibold  group relative no-underline w-max ${
+        isActive ? "text-customGreen " : "text-gray-900"
       }`
     }
   >
@@ -113,8 +113,8 @@ const Header = () => {
   <NavLink
     to="/contact"
     className={({ isActive }) =>
-      `text-base font-semibold m-6 group relative w-max ${
-        isActive ? "text-customGreen no-underline" : "text-gray-900"
+      `text-base font-semibold  group relative no-underline w-max ${
+        isActive ? "text-customGreen " : "text-gray-900"
       }`
     }
   >
@@ -125,7 +125,7 @@ const Header = () => {
 
   <NavLink
     to="/admin"
-    className="m-6"
+    className=""
   >
     <button
       type="button"
