@@ -76,11 +76,11 @@ const Footer = () => {
   {/* Company Section */}
   <div className="w-full lg:w-1/3 mb-6 lg:mb-0  md:text-left">
     <h1 className="text-xl  lg:text-center font-bold text-gray-800 mb-4 md:text-left">COMPANY</h1>
-    <ul className="text-gray-700 lg:ml-[8.5rem]  space-y-2">
-      <li><a href="#" className="hover:underline">Home</a></li>
-      <li><a href="#" className="hover:underline">About us</a></li>
-      <li><a href="#" className="hover:underline">Delivery</a></li>
-      <li><a href="#" className="hover:underline">Privacy policy</a></li>
+    <ul className="text-gray-700 lg:ml-[8.5rem]   space-y-2 ">
+      <li><a href="#" className="no-underline text-gray-600 hover:underline">Home</a></li>
+      <li><a href="#" className="no-underline text-gray-600 hover:underline">About us</a></li>
+      <li><a href="#" className="no-underline text-gray-600 hover:underline">Delivery</a></li>
+      <li><a href="#" className="no-underline text-gray-600 hover:underline">Privacy policy</a></li>
     </ul>
   </div>
 
