@@ -14,7 +14,7 @@ const Appointment = () => {
           <div className='p-5 m-3'>
             <p className="text-4xl ml-[80px] sm:text-5xl md:text-5xl md:mt-[50px] lg:text-5xl text-gray-900 font-bold leading-tight md:leading-tight lg:leading-tight ">
               <span className='text-[#17bf8f] '>Book</span> Appointment <br />
-              With <span className='text-[#17bf8f]'>100+</span> Trusted Doctors
+              With <span className='bg-gradient-to-r from-customGreen to-indigo-400 bg-clip-text text-transparentbg-gradient-to-r from-customGreen to-indigo-400 bg-clip-text text-transparent'>100+</span> Trusted Doctors
             </p>
             {/* <button className="no-underline gap-2 px-8 py-3 ml-[80px] bg-[#17bf8f] text-white font-semibold rounded-lg shadow-md hover:scale-105 transition-all duration-300 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 ">
               Create Account
