@@ -12,7 +12,9 @@ const About = () => {
       {/* About Us Section */}
       <div className="relative flex flex-col bg-[#ecfbf8]  md:flex-row bg-[#cbf4ec] justify-between items-center max-w-6xl mx-auto  overflow-hidden">
         {/* Images Section */}
-        <div className=" flex flex-col justify-center items-center mt-6 md:mt-0 md:items-end md:w-1/2">
+        <div className=" flex flex-col justify-center items-center mt-6 md:mt-0 md:items-end md:w-1/2 animate__animated animate__fadeInLeft"
+          style={{ animationDuration: '1s' }}
+        >
          
           <img
             src={assets.about_us}
@@ -22,7 +24,9 @@ const About = () => {
         </div>
 
         {/* Description Section */}
-        <div className="p-4 md:w-1/2">
+        <div className="p-4 md:w-1/2 animate__animated animate__fadeInRight"
+        style={{ animationDuration: '1s' }}
+        >
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
             MediMeet is a revolutionary healthcare platform connecting patients with qualified doctors seamlessly. Our mission is to simplify healthcare access, making it easier for you to find the right doctor, book appointments, and manage your healthcare needs efficiently.
           </p>

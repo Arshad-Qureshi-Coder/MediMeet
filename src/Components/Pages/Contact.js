@@ -23,7 +23,7 @@ const Contact = () => {
 
         {/* Contact Information Section with Fade-In-Right Animation */}
         <div
-          className="bg-gray-50 p-8 text-gray-800 lg:w-[40%] w-full animate__animated animate__fadeInRight"
+          className=" p-8 text-gray-800 lg:w-[40%] w-full animate__animated animate__fadeInRight"
           style={{ animationDuration: '1s' }}
         >
           <h1 className="text-2xl font-bold text-customGreen mb-4">OUR OFFICE</h1>
@@ -39,7 +39,7 @@ const Contact = () => {
                 href="mailto:greatstackdev@gmail.com"
                 className="text-customGreen underline hover:text-green-600"
               >
-                greatstackdev@gmail.com
+                medimeet@xyz.com
               </a>
             </span>
           </p>
